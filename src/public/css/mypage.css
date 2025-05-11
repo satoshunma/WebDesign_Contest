@@ -1,0 +1,163 @@
+body {
+    background-color: #f6f8f2;
+    font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+    color: #222;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  /* --- 中央 新着エリア --- */
+  .main-contents {
+    width: 55%;
+    text-align: center;
+    margin: 60px auto;
+  }
+   
+  .main-contents::after {
+    display: block;
+    background-color: #ccc;
+    color: white;
+    font-size: 32px;
+    width: 100%;
+    padding: 5em 0;
+    font-weight: bold;
+    aspect-ratio: 5 / 2;
+  }
+
+  /* --- レスポンシブ対応 --- */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 24px;
+    }
+  
+    .left-menu,
+    .main-contents,
+    .right-menu {
+      width: 100%;
+      margin-top: 0;
+    }
+  
+    .left-menu a,
+    .right-menu a {
+      font-size: 16px;
+    }
+  
+    .main-contents::after {
+      font-size: 24px;
+      padding: 4em 0;
+    }
+  }
+  
+  .breadcrumb-001 {
+    display: flex;
+    gap: 0 22px;
+    list-style: none;
+    padding: 0;
+    font-size: .9em;
+  }
+
+  .breadcrumb-001 li {
+    display: flex;
+    align-items: center;
+  }
+
+  .breadcrumb-001 li:first-child::before {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: 4px;
+    background-repeat: no-repeat;
+    content: '';
+  }
+
+  .breadcrumb-001 li:not(:last-child)::after {
+    display: inline-block;
+    transform: rotate(45deg);
+    width: .3em;
+    height: .3em;
+    margin-left: 10px;
+    border-top: 1px solid #5b47fb;
+    border-right: 1px solid #5b47fb;
+    content: '';
+  }
+
+  .breadcrumb-001 a {
+    color: #333333;
+    text-decoration: none;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  .form-container {
+    width: 80%;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    margin: 0 auto;
+  }
+  
+  .avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .avatar img {
+    width: 80px;
+    opacity: 0.7;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e5e5e5;
+    padding: 0 10px;
+  }
+  
+  .button {
+    width: 40%;
+    background-color: #463b87;
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 20px auto;
+  }
+  
+  .button:hover {
+    background-color: #382f6e;
+  }
+  

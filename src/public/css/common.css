@@ -1,0 +1,230 @@
+/* ベーススタイル */
+html {
+  font-family: sans-serif;
+}
+
+body {
+  background: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* ナビゲーションリセット */
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #4b5564;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* ヘッダー */
+.header {
+  background: #F4F5F1;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.header__inner {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 10px 15px;
+  position: relative;
+  height: 75px;
+}
+
+.header__logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 50px;
+}
+
+.header__nav {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header__nav .nav__list {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item .nav__link {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav__item:first-child .nav__link {
+  background-color: #c2ccef;
+}
+
+.nav__item:last-child .nav__link {
+  background-color: #5440e6;
+}
+
+.logout-button {
+  display: inline-block;
+  width: auto;
+  white-space: nowrap;
+  background: #5440e6;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.logout-form {
+  display: inline;
+  margin: 0;
+}
+
+/* グローバルナビ（新） */
+.gnav {
+  background-color: #5440e6;
+  padding: 1rem 0;
+}
+
+.gnav__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gnav__link {
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.3s;
+}
+
+.gnav__link:hover {
+  opacity: 0.8;
+}
+
+.gnav__label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  color: #D2E640;
+}
+
+.gnav__sub {
+  display: block;
+  font-size: 1rem;
+  margin-top: 0.2em;
+}
+
+@media (max-width: 600px) {
+  .gnav__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+/* 新着とfooter間に余白 */
+main {
+  margin-bottom: 3rem;
+}
+
+/* 投稿ボタン */
+.floating-post-button {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #5440e6;
+  color: white;
+  font-size: 16px;
+  padding: 24px 36px;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 999;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.floating-post-button:hover {
+  background-color: #3b368b;
+}
+
+/* フッター */
+.footer {
+  padding: 2rem;
+  font-size: 15px;
+  color: #4b5564;
+  background: #c2ccef;
+}
+
+.footer__logo {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.footer__navi-heading {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.footer__navi li {
+  margin-bottom: 0.75rem;
+}
+
+.footer .grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .md-flex {
+    display: flex;
+  }
+
+  .md-justify-between {
+    justify-content: space-between;
+  }
+}

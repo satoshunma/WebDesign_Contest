@@ -1,0 +1,202 @@
+body {
+    background-color: #f6f8f2;
+    font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+    color: #222;
+  }
+  
+  /* --- 検索フォーム --- */
+  .search-form-1 {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 30px auto 0;
+    border: 2px solid #5b47fb;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  .search-form-1 input {
+    width: 35vw;
+    height: 45px;
+    padding: 0 15px;
+    border: none;
+    font-size: 1em;
+    outline: none;
+    background-color: transparent;
+  }
+  
+  .search-form-1 input::placeholder {
+    color: #777777;
+  }
+  
+  .search-form-1 button {
+    width: 50px;
+    height: 45px;
+    border: none;
+    background-color: #5b47fb;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search-form-1 button::after {
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    content: '';
+  }
+  
+  /* --- 全体レイアウト --- */
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+  
+  /* --- 中央 新着エリア --- */
+  .main-contents {
+    width: 55%;
+    text-align: center;
+    margin: 60px auto;
+  }
+  
+  .main-contents h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  
+  .main-contents::after {
+    display: block;
+    background-color: #ccc;
+    color: white;
+    font-size: 32px;
+    width: 100%;
+    padding: 5em 0;
+    font-weight: bold;
+    aspect-ratio: 5 / 2;
+  }
+  
+/* --- 新着カード型 --- */
+.new-items {
+    display: grid;
+    grid-template-columns: 1fr; /* 1列に変更 */
+    gap: 20px;
+    text-align: left;
+    margin-top: 20px;
+}
+  
+  .new-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .new-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  
+  .new-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .new-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .new-card-link {
+    display: inline-block;
+    font-size: 14px;
+    color: #3b368b;
+    text-decoration: underline;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .user-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+
+  .breadcrumb-001 {
+    display: flex;
+    gap: 0 22px;
+    list-style: none;
+    padding: 0;
+    font-size: .9em;
+}
+
+.breadcrumb-001 li {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-001 li:first-child::before {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: 4px;
+    background-repeat: no-repeat;
+    content: '';
+}
+
+.breadcrumb-001 li:not(:last-child)::after {
+    display: inline-block;
+    transform: rotate(45deg);
+    width: .3em;
+    height: .3em;
+    margin-left: 10px;
+    border-top: 1px solid #5b47fb;
+    border-right: 1px solid #5b47fb;
+    content: '';
+}
+
+.breadcrumb-001 a {
+    color: #333333;
+    text-decoration: none;
+}
+
+  /* --- レスポンシブ対応 --- */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 24px;
+    }
+  
+    .left-menu,
+    .main-contents,
+    .right-menu {
+      width: 100%;
+      margin-top: 0;
+    }
+  
+    .left-menu a,
+    .right-menu a {
+      font-size: 16px;
+    }
+  
+    .main-contents::after {
+      font-size: 24px;
+      padding: 4em 0;
+    }
+  }

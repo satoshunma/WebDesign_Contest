@@ -1,0 +1,140 @@
+body {
+  background-color: #f6f8f2;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  color: #222;
+}
+
+/* コンテナ */
+.main-contents {
+  width: 55%;
+  text-align: center;
+  margin: 60px auto;
+}
+
+/* 見出し */
+.contact-form__heading h2 {
+  font-size: 1.8rem;
+  color: #374151;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* --- パンくず --- */
+.breadcrumb-001 {
+  display: flex;
+  gap: 0 22px;
+  list-style: none;
+  padding: 0;
+  font-size: .9em;
+}
+
+.breadcrumb-001 li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-001 li:first-child::before {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 4px;
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.breadcrumb-001 li:not(:last-child)::after {
+  display: inline-block;
+  transform: rotate(45deg);
+  width: .3em;
+  height: .3em;
+  margin-left: 10px;
+  border-top: 1px solid #5b47fb;
+  border-right: 1px solid #5b47fb;
+  content: '';
+}
+
+.breadcrumb-001 a {
+  color: #333333;
+  text-decoration: none;
+}
+
+/* フォーム */
+.form__group {
+  margin-bottom: 24px;
+}
+
+.form__group-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.form__label--item {
+  font-size: 1rem;
+}
+
+.form__label--required {
+  margin-left: 8px;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  color: #dc2626;
+  background-color: #fef2f2;
+  border-radius: 4px;
+}
+
+/* 入力欄 */
+.form__input--text input,
+.form__input--text select,
+.form__input--textarea textarea {
+  width: 70%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.form__input--text input:focus,
+.form__input--text select:focus,
+.form__input--textarea textarea:focus {
+  border-color: #6366f1;
+  outline: none;
+}
+
+/* テキストエリア */
+.form__input--textarea textarea {
+  height: 160px;
+  resize: vertical;
+}
+
+/* 送信ボタン */
+.form__button {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.form__button-submit {
+  background-color: #6366f1;
+  color: white;
+  font-size: 1rem;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.form__button-submit:hover {
+  background-color: #4f46e5;
+}
+
+/* エラーメッセージ表示用 */
+.form__error {
+  margin-top: 6px;
+  color: #dc2626;
+  font-size: 0.875rem;
+}
