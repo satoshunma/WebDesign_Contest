@@ -20,19 +20,19 @@
 git clone git@github.com:satoshunma/WebDesign_Contest.git
 cd WebDesign_Contest
 
-2. Docker コンテナをビルド・起動
+### 2. Docker コンテナをビルド・起動
 
 docker-compose up -d --build
 
-3. PHP コンテナに入る
+### 3. PHP コンテナに入る
 
 docker-compose exec php bash
 
-4. Laravel の依存パッケージをインストール
+### 4. Laravel の依存パッケージをインストール
 
 composer install
 
-5. .env ファイルの作成とアプリキー生成
+### 5. .env ファイルの作成とアプリキー生成
 
 cp .env.example .env
 php artisan key:generate
@@ -48,7 +48,7 @@ DB_DATABASE=laravel_db
 DB_USERNAME=laravel_user
 DB_PASSWORD=laravel_pass
 
-6. マイグレーションと初期データ投入
+### 6. マイグレーションと初期データ投入
 
 php artisan migrate --seed
 
