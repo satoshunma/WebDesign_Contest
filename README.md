@@ -42,11 +42,17 @@ php artisan key:generate
 APP_URL=http://localhost
 
 DB_CONNECTION=mysql
+
 DB_HOST=mysql
+
 DB_PORT=3306
+
 DB_DATABASE=laravel_db
+
 DB_USERNAME=laravel_user
+
 DB_PASSWORD=laravel_pass
+
 
 ### 6. マイグレーションと初期データ投入
 
@@ -56,6 +62,10 @@ php artisan migrate --seed
 
 
 php artisan serve は不要です。Nginx 経由で http://localhost にアクセスできます。
+
 phpMyAdmin は http://localhost:8080 で利用可能。
+
 ユーザー名: laravel_user
+
 パスワード: laravel_pass
+
