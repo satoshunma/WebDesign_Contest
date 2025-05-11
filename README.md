@@ -63,6 +63,7 @@ php artisan migrate --seed
 【AI使用箇所】
 - ChatGPTを用いて、CSSレイアウトの初期構造を提案してもらいました。 
 - 生成されたコードは手動で調整・変更しています。
+- シーディングの内容を考えるのに利用されています
 
 
 php artisan serve は不要です。Nginx 経由で http://localhost にアクセスできます。
