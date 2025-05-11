@@ -34,9 +34,9 @@
             </li>
             @endif
             <li class="nav__item">
-              <form action="/logout" method="POST" style="display: inline-block; margin: 0;">
+              <form action="/logout" method="POST" class="logout-form">
                 @csrf
-                <button type="submit" class="nav__link logout-button" style="background: none; border: none; padding: 8px 16px; border-radius: 8px; font-size: 14px; font-weight: bold; color: #fff; cursor: pointer; background: #5440e6;">
+                <button type="submit" class="nav__link logout-button">
                   ログアウト
                 </button>
               </form>

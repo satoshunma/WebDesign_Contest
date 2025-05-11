@@ -68,6 +68,22 @@ hr {
   transform: translateY(-50%);
 }
 
+.logout-form {
+  display: inline-block;
+  margin: 0;
+}
+
+.logout-button {
+  background: #5440e6;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
 .header__nav .nav__list {
   display: flex;
   gap: 10px;
